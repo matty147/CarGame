@@ -18,8 +18,12 @@
   ],
   "ResourceOrderSettings": [
     {"name":"Spr_Grass","order":2,"path":"sprites/Spr_Grass/Spr_Grass.yy",},
+    {"name":"Obj_GameManager","order":3,"path":"objects/Obj_GameManager/Obj_GameManager.yy",},
+    {"name":"Spr_Ramp","order":4,"path":"sprites/Spr_Ramp/Spr_Ramp.yy",},
     {"name":"Spr_Bullet","order":1,"path":"sprites/Spr_Bullet/Spr_Bullet.yy",},
+    {"name":"Obj_Air","order":4,"path":"objects/Obj_Air/Obj_Air.yy",},
     {"name":"Spr_Ground","order":3,"path":"sprites/Spr_Ground/Spr_Ground.yy",},
     {"name":"Obj_Ground","order":1,"path":"objects/Obj_Ground/Obj_Ground.yy",},
+    {"name":"Obj_Ramp","order":2,"path":"objects/Obj_Ramp/Obj_Ramp.yy",},
   ],
 }

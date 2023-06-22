@@ -6,6 +6,20 @@ else if keyboard_check(ord("D")) || keyboard_check(vk_right)
 {
     image_angle -= TurnSpeed;
 }
+if place_meeting(x,y, Obj_Ramp)
+{
+	height = 18; 
+	image_index = 1;
+	layer = 0;
+}else
+{
+	image_index = 0; layer = 1;
+ if (height > 0)
+ {
+height--;
+
+ }
+}
 
 if place_meeting(x,y, Obj_Ground)
 {
