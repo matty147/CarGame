@@ -5,3 +5,5 @@ DefMovement = Movement;
 SpeedUp = 0;
 MaxSpeedUp = 1;
 height = 0;
+LastRecordedX = 0;
+LastRecordedY = 0;

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "Obj_Air",
+  "name": "Obj_Barrier",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
@@ -25,7 +25,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "Spr_Barrier",
+    "path": "sprites/Spr_Barrier/Spr_Barrier.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

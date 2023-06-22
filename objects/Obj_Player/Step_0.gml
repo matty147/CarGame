@@ -1,3 +1,12 @@
+	DirX = lengthdir_x(Movement, image_angle);
+	DirY = lengthdir_y(Movement, image_angle);
+
+if !place_meeting(x + DirX * SpeedUp, y + DirY * SpeedUp, Obj_Ramp)
+{
+	LastRecordedX = x;
+	LastRecordedY = y;
+}
+
 if keyboard_check(ord("A")) || keyboard_check(vk_left)
 {
     image_angle += TurnSpeed;
@@ -14,14 +23,14 @@ if place_meeting(x,y, Obj_Ramp)
 }else
 {
 	image_index = 0; layer = 1;
- if (height > 0)
- {
-height--;
-
- }
+	 if (height > 0)
+	 {
+		height--;
+		//y++;
+	 }
 }
 
-if place_meeting(x,y, Obj_Ground)
+if place_meeting(x,y, Obj_Ground) || height != 0
 {
 	if (Movement <= DefMovement)
 	{
@@ -41,13 +50,13 @@ if keyboard_check(ord("W")) || keyboard_check(vk_up)
 	{
 		SpeedUp += 0.01;
 	}
-	MoveX = lengthdir_x(Movement, image_angle);
-	MoveY = lengthdir_y(Movement, image_angle);
+	MoveX = DirX;
+	MoveY = DirY;
 }else if keyboard_check(ord("S")) || keyboard_check(vk_down)
 {
 	SpeedUp = 0.5;
-	MoveX = lengthdir_x(Movement, image_angle) * -1;
-	MoveY = lengthdir_y(Movement, image_angle) * -1;
+	MoveX = DirX * -1;
+	MoveY = DirY * -1;
 }else
 {
 	MoveY = 0; MoveX = 0;
@@ -57,5 +66,8 @@ if keyboard_check(ord("W")) || keyboard_check(vk_up)
 	}
 }
 
-x += MoveX * SpeedUp;
-y += MoveY * SpeedUp;
+if height > 0 || !place_meeting(x + MoveX * SpeedUp, y + MoveY * SpeedUp, Obj_Barrier)
+{
+	x += MoveX * SpeedUp;
+	y += MoveY * SpeedUp;
+}
