@@ -38,14 +38,17 @@ if place_meeting(x,y, Obj_Ramp)
 }else
 {
 	image_index = 0; layer = 1;
-	 if (height > 0)
-	 {
-		height--;
-		if (LastRecordedY >= y)
-		{
-			y++;
-		}
-	 }
+	if  1== 1 //!place_meeting(x,y, Obj_ElevatedGround)
+	{
+		 if (height > 0)
+		 {
+			height--;
+			if (LastRecordedY >= y)
+			{
+				y++;
+			}
+		 }
+	}
 }
 
 if place_meeting(x,y, Obj_Ground) || height != 0
@@ -83,10 +86,13 @@ if keyboard_check(ord("W")) || keyboard_check(vk_up)
 		SpeedUp -= 0.1;
 	}
 }
-
-if height > 0 && !place_meeting(x,y,Obj_Player)
-{
-	SpeedUp = 0.5;
+												//will have to make this work
+if height > 0 && !place_meeting(x,y,Obj_Player) // && !place_meeting(x,y,Obj_ElevatedGround)
+{ 
+	if place_meeting(x,y,Obj_Ramp)
+	{
+		SpeedUp = 0.75;
+	}else SpeedUp = 0.5;
 	MoveX = DirX;
 }
 if height == 1
