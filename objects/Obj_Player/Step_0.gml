@@ -24,15 +24,15 @@ if place_meeting(x,y, Obj_Ramp)
 		y = LastRecordedY - 0;
 	}else if distance < ramp_width * 0.5
 	{
-		y = LastRecordedY - 6;
+		y = LastRecordedY - 8;
 	}else if distance < ramp_width * 0.75
 	{
-		y = LastRecordedY - 12;
+		y = LastRecordedY - 16;
 	}else if distance < ramp_width
 	{
-		y = LastRecordedY - 18;
+		y = LastRecordedY - 24;
 	}
-	height = 18; 
+	height = 24; 
 	image_index = 1;
 	layer = 0;
 }else
@@ -82,6 +82,16 @@ if keyboard_check(ord("W")) || keyboard_check(vk_up)
 	{
 		SpeedUp -= 0.1;
 	}
+}
+
+if height > 0 && !place_meeting(x,y,Obj_Player)
+{
+	SpeedUp = 0.5;
+	MoveX = DirX;
+}
+if height == 1
+{
+ SpeedUp = 1;	
 }
 
 if height > 0 || !place_meeting(x + MoveX * SpeedUp, y + MoveY * SpeedUp, Obj_Barrier)
