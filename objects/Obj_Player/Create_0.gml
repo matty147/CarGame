@@ -1,3 +1,5 @@
+ramp_width = sprite_get_width(Obj_Ramp.sprite_index);
+
 image_speed = 0;
 MoveX = 0;
 MoveY = 0;

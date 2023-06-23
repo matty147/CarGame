@@ -1,6 +1,5 @@
 	DirX = lengthdir_x(Movement, image_angle);
 	DirY = lengthdir_y(Movement, image_angle);
-
 if !place_meeting(x + DirX * SpeedUp, y + DirY * SpeedUp, Obj_Ramp)
 {
 	LastRecordedX = x;
@@ -17,6 +16,22 @@ else if keyboard_check(ord("D")) || keyboard_check(vk_right)
 }
 if place_meeting(x,y, Obj_Ramp)
 {
+	var distance = point_distance(LastRecordedX, 0, x, 0);
+	//show_debug_message("Distance: " + string(distance));
+	
+	if distance < ramp_width * 0.25
+	{
+		y = LastRecordedY - 0;
+	}else if distance < ramp_width * 0.5
+	{
+		y = LastRecordedY - 6;
+	}else if distance < ramp_width * 0.75
+	{
+		y = LastRecordedY - 12;
+	}else if distance < ramp_width
+	{
+		y = LastRecordedY - 18;
+	}
 	height = 18; 
 	image_index = 1;
 	layer = 0;
@@ -26,7 +41,10 @@ if place_meeting(x,y, Obj_Ramp)
 	 if (height > 0)
 	 {
 		height--;
-		//y++;
+		if (LastRecordedY >= y)
+		{
+			y++;
+		}
 	 }
 }
 
