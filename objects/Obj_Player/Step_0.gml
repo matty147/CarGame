@@ -105,3 +105,4 @@ if height > 0 || !place_meeting(x + MoveX * SpeedUp, y + MoveY * SpeedUp, Obj_Ba
 	x += MoveX * SpeedUp;
 	y += MoveY * SpeedUp;
 }
+show_debug_message("SpeedUp:" + string(SpeedUp));

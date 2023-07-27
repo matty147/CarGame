@@ -14,5 +14,6 @@ if place_meeting(x, y, Obj_Player)
 
 if (global.PlayerLaps >= LapsToWin)
 {
-	 game_end();
+	show_debug_message("GameEnd");
+	game_end();
 }

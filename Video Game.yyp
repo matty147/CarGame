@@ -45,6 +45,7 @@
     {"id":{"name":"Obj_Start","path":"objects/Obj_Start/Obj_Start.yy",},},
     {"id":{"name":"Spr_Ground","path":"sprites/Spr_Ground/Spr_Ground.yy",},},
     {"id":{"name":"Obj_Checkpoint","path":"objects/Obj_Checkpoint/Obj_Checkpoint.yy",},},
+    {"id":{"name":"PlayerMovement","path":"scripts/PlayerMovement/PlayerMovement.yy",},},
     {"id":{"name":"Obj_Player","path":"objects/Obj_Player/Obj_Player.yy",},},
     {"id":{"name":"Obj_ElevatedGround","path":"objects/Obj_ElevatedGround/Obj_ElevatedGround.yy",},},
     {"id":{"name":"Spr_Start","path":"sprites/Spr_Start/Spr_Start.yy",},},
