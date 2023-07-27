@@ -108,6 +108,8 @@ if height > 0 || !place_meeting(x + MoveX * SpeedUp, y + MoveY * SpeedUp, Obj_Ba
 }
 show_debug_message("SpeedUp:" + string(SpeedUp));
 */
-var result = PlayerMovement(x,y);
+
+
+var result = PlayerMovement(x, y, Up, Down, Left, Right);
 x = result[0];
 y = result[1];

@@ -1,4 +1,4 @@
-function PlayerMovement(X, Y){
+function PlayerMovement(X, Y, Up, Down, Left, Right){
 	
 		DirX = lengthdir_x(Movement, image_angle);
 		DirY = lengthdir_y(Movement, image_angle);
@@ -8,11 +8,11 @@ function PlayerMovement(X, Y){
 		LastRecordedY = Y;
 	}
 
-	if keyboard_check(ord("A")) || keyboard_check(vk_left)
+	if keyboard_check(ord(Left)) || keyboard_check(vk_left)
 	{
 	    image_angle += TurnSpeed;
 	}
-	else if keyboard_check(ord("D")) || keyboard_check(vk_right)
+	else if keyboard_check(ord(Right)) || keyboard_check(vk_right)
 	{
 	    image_angle -= TurnSpeed;
 	}
@@ -67,7 +67,7 @@ function PlayerMovement(X, Y){
 			Movement -= 0.25;
 		}
 	}
-	if keyboard_check(ord("W")) || keyboard_check(vk_up)
+	if keyboard_check(ord(Up))|| keyboard_check(vk_up)
 	{
 		if (SpeedUp <= MaxSpeedUp)
 		{
@@ -75,7 +75,7 @@ function PlayerMovement(X, Y){
 		}
 		MoveX = DirX;
 		MoveY = DirY;
-	}else if keyboard_check(ord("S")) || keyboard_check(vk_down)
+	}else if keyboard_check(ord(Down)) || keyboard_check(vk_down)
 	{
 		SpeedUp = 0.5;
 		MoveX = DirX * -1;

@@ -29,6 +29,10 @@
   "properties": [
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"Movement","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"5","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"TurnSpeed","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"3","varType":0,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"Up","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"","varType":2,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"Down","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"","varType":2,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"Left","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"","varType":2,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"Right","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"","varType":2,},
   ],
   "solid": false,
   "spriteId": {
