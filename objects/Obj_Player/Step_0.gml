@@ -1,3 +1,4 @@
+/*
 	DirX = lengthdir_x(Movement, image_angle);
 	DirY = lengthdir_y(Movement, image_angle);
 if !place_meeting(x + DirX * SpeedUp, y + DirY * SpeedUp, Obj_Ramp)
@@ -106,3 +107,7 @@ if height > 0 || !place_meeting(x + MoveX * SpeedUp, y + MoveY * SpeedUp, Obj_Ba
 	y += MoveY * SpeedUp;
 }
 show_debug_message("SpeedUp:" + string(SpeedUp));
+*/
+var result = PlayerMovement(x,y);
+x = result[0];
+y = result[1];
