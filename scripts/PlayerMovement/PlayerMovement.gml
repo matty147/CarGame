@@ -7,15 +7,22 @@ function PlayerMovement(X, Y, Up, Down, Left, Right){
 		LastRecordedX = X;
 		LastRecordedY = Y;
 	}
-
-	if keyboard_check(ord(Left)) || keyboard_check(vk_left)
+if Left != 0 && Right != 0
+{
+	if keyboard_check(ord(Left)) 
 	{
-	    image_angle += TurnSpeed;
-	}
-	else if keyboard_check(ord(Right)) || keyboard_check(vk_right)
+		image_angle += TurnSpeed;
+	}	else if keyboard_check(ord(Right))
 	{
 	    image_angle -= TurnSpeed;
 	}
+}else if keyboard_check(vk_left)
+{
+	image_angle += TurnSpeed;
+}else if keyboard_check(vk_right)
+{
+	image_angle -= TurnSpeed;
+}
 	if place_meeting(X,Y, Obj_Ramp)
 	{
 		var distance = point_distance(LastRecordedX, 0, X, 0);
@@ -67,7 +74,30 @@ function PlayerMovement(X, Y, Up, Down, Left, Right){
 			Movement -= 0.25;
 		}
 	}
-	if keyboard_check(ord(Up))|| keyboard_check(vk_up)
+	if Up != 0 && Down != 0
+	{
+		if keyboard_check(ord(Up))
+			{
+				if (SpeedUp <= MaxSpeedUp)
+				{
+					SpeedUp += 0.01;
+				}
+				MoveX = DirX;
+				MoveY = DirY;
+			}else if keyboard_check(ord(Down))
+			{
+				SpeedUp = 0.5;
+				MoveX = DirX * -1;
+				MoveY = DirY * -1;
+			}else
+			{
+				MoveY = 0; MoveX = 0;
+				if (SpeedUp > 0.1)
+				{
+					SpeedUp -= 0.1;
+				}
+			}
+	}else if keyboard_check(vk_up)
 	{
 		if (SpeedUp <= MaxSpeedUp)
 		{
@@ -75,7 +105,7 @@ function PlayerMovement(X, Y, Up, Down, Left, Right){
 		}
 		MoveX = DirX;
 		MoveY = DirY;
-	}else if keyboard_check(ord(Down)) || keyboard_check(vk_down)
+	}else if keyboard_check(vk_down)
 	{
 		SpeedUp = 0.5;
 		MoveX = DirX * -1;
@@ -88,6 +118,11 @@ function PlayerMovement(X, Y, Up, Down, Left, Right){
 			SpeedUp -= 0.1;
 		}
 	}
+	{
+		
+		
+	}
+
 													//will have to make this work
 	if height > 0 && !place_meeting(X,Y,Obj_Player) // && !place_meeting(x,y,Obj_ElevatedGround)
 	{ 
