@@ -142,6 +142,6 @@ if Left != 0 && Right != 0
 		X += MoveX * SpeedUp;
 		Y += MoveY * SpeedUp;
 	}
-	show_debug_message("SpeedUp:" + string(SpeedUp));
+	//show_debug_message("SpeedUp:" + string(SpeedUp));
 return [X, Y];
 }
