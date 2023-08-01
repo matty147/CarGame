@@ -30,7 +30,7 @@
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"NumberOfCheckpoints","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"3","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"LapsToWin","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"3","varType":1,},
   ],
-  "solid": false,
+  "solid": true,
   "spriteId": {
     "name": "Spr_Start",
     "path": "sprites/Spr_Start/Spr_Start.yy",

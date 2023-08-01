@@ -1,2 +1,2 @@
-global.CurentCheckpointNumber = 0;
-global.PlayerLaps = 0;
+global.CurentCheckpointNumberPlayer = array_create(4, 0);
+global.PlayerLapsPlayer = array_create(4, 0);

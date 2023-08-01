@@ -113,3 +113,34 @@ show_debug_message("SpeedUp:" + string(SpeedUp));
 var result = PlayerMovement(x, y, Up, Down, Left, Right);
 x = result[0];
 y = result[1];
+
+
+
+/*
+ if PlayerId == 1
+ {
+	 global.Player1id = instance_id;
+	 show_debug_message("Player1id: " + string(global.Player1id));
+ }
+ if PlayerId == 2
+ {
+	 global.Player2id = instance_id;
+	 show_debug_message("Player2id: " + string(global.Player2id));
+
+ }
+ if PlayerId == 3
+ {
+	global.Player3id = instance_id; 
+	show_debug_message("Player3id: " + string(global.Player3id));
+
+ }
+ if PlayerId == 4
+ {
+	 global.Player4id = instance_id;
+	 show_debug_message("Player4id: " + string(global.Player4id));
+ }
+ */
+ 
+
+
+
