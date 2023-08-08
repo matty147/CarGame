@@ -9,3 +9,4 @@ MaxSpeedUp = 1;
 height = 0;
 LastRecordedX = 0;
 LastRecordedY = 0;
+CurentBoxVal = 1;

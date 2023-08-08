@@ -31,9 +31,10 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.92",
+    "IDEVersion": "2023.6.0.89",
   },
   "resources": [
+    {"id":{"name":"Spr_HitBox","path":"sprites/Spr_HitBox/Spr_HitBox.yy",},},
     {"id":{"name":"Spr_Grass","path":"sprites/Spr_Grass/Spr_Grass.yy",},},
     {"id":{"name":"Spr_Player","path":"sprites/Spr_Player/Spr_Player.yy",},},
     {"id":{"name":"Obj_GameManager","path":"objects/Obj_GameManager/Obj_GameManager.yy",},},
@@ -42,6 +43,7 @@
     {"id":{"name":"Obj_Barrier","path":"objects/Obj_Barrier/Obj_Barrier.yy",},},
     {"id":{"name":"Spr_Button","path":"sprites/Spr_Button/Spr_Button.yy",},},
     {"id":{"name":"Spr_Checkpoint","path":"sprites/Spr_Checkpoint/Spr_Checkpoint.yy",},},
+    {"id":{"name":"Obj_Ai_Goto_Box","path":"objects/Obj_Ai_Goto_Box/Obj_Ai_Goto_Box.yy",},},
     {"id":{"name":"Spr_ElevatedGround","path":"sprites/Spr_ElevatedGround/Spr_ElevatedGround.yy",},},
     {"id":{"name":"Obj_Start","path":"objects/Obj_Start/Obj_Start.yy",},},
     {"id":{"name":"Spr_Ground","path":"sprites/Spr_Ground/Spr_Ground.yy",},},
@@ -50,6 +52,7 @@
     {"id":{"name":"Obj_Player","path":"objects/Obj_Player/Obj_Player.yy",},},
     {"id":{"name":"Obj_Button","path":"objects/Obj_Button/Obj_Button.yy",},},
     {"id":{"name":"Obj_ElevatedGround","path":"objects/Obj_ElevatedGround/Obj_ElevatedGround.yy",},},
+    {"id":{"name":"AiControlls","path":"scripts/AiControlls/AiControlls.yy",},},
     {"id":{"name":"Spr_Start","path":"sprites/Spr_Start/Spr_Start.yy",},},
     {"id":{"name":"Spr_Barrier","path":"sprites/Spr_Barrier/Spr_Barrier.yy",},},
     {"id":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},},
