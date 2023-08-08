@@ -1,8 +1,8 @@
 function AiControlls(X, Y, CurentBoxVal){
 //show_debug_message("Ai");
-SearchForId = true;
 spd = 3;
-var foundInstance = noone;
+//var foundInstance = noone;
+SearchForId = true;
 if SearchForId
 {
 	for (var i = 0; i < instance_number(Obj_Ai_Goto_Box); i++) {
@@ -10,7 +10,7 @@ if SearchForId
 	    if (instance.BoxNumber == CurentBoxVal){
 	        foundInstance = instance;
 			//show_debug_message("FoundId:" + string(SearchForId));
-	        break; // Exit the loop once the instance is found
+	        break;
 	    }
 	}
 }

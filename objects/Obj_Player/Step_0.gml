@@ -110,9 +110,14 @@ show_debug_message("SpeedUp:" + string(SpeedUp));
 */
 if Ai
 {
+if timer < 0
+	{
+	deviation = irandom_range(-20, 20);
+	timer = 100;
+	}else timer--;
 	var result = AiControlls(x ,y, CurentBoxVal);
-	image_angle = point_direction(x, y, result[1].x, result[1].y);
-	move_towards_point(result[1].x, result[1].y, result[0]*10);
+	image_angle = point_direction(x, y, result[1].x + deviation, result[1].y + deviation);
+	move_towards_point(result[1].x + deviation, result[1].y + deviation, result[0]* 1.5);
 	CurentBoxVal = result[2]
 	if (CurentBoxVal > Ai_checkpoints)
 	CurentBoxVal = 1;
