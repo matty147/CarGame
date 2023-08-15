@@ -112,20 +112,27 @@ if Ai
 {
 if timer < 0
 	{
-	deviation = irandom_range(-20, 20);
-	timer = 100;
+		deviation = irandom_range(-20, 20);
+		timer = 100;
 	}else timer--;
-	var result = AiControlls(x ,y, CurentBoxVal);
-	image_angle = point_direction(x, y, result[1].x + deviation, result[1].y + deviation);
-	move_towards_point(result[1].x + deviation, result[1].y + deviation, result[0]* 1.5);
+	var result = AiControlls(x ,y, CurentBoxVal,spd);
+	angle = point_direction(x, y, result[1].x + deviation, result[1].y + deviation);
+	half_angle = min(image_angle, angle) + angle_difference(image_angle, angle) / 4;
+	image_angle = angle;
+	spd = result[0];
+	show_debug_message("image_angle: " + string(half_angle )); // should make the rotacion more smooth
+	var targetX = lengthdir_x(result[0] * 1.5, half_angle );
+	var targetY = lengthdir_y(result[0] * 1.5, half_angle );
+	move_towards_point(result[1].x + deviation + targetX, result[1].y + deviation + targetY, result[0]);
+	//move_towards_point(result[1].x + deviation, result[1].y + deviation, result[0]* 1.5);
 	CurentBoxVal = result[2]
-	if (CurentBoxVal > Ai_checkpoints)
-	CurentBoxVal = 1;
+	if (CurentBoxVal > Ai_checkpoints)	
+	{
+		CurentBoxVal = 1;
+	}
 }else
 {
 	var result = PlayerMovement(x, y, Up, Down, Left, Right);
 x = result[0];
 y = result[1];
 }
-
-

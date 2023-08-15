@@ -1,8 +1,11 @@
-function AiControlls(X, Y, CurentBoxVal){
+function AiControlls(X, Y, CurentBoxVal,spd){
 //show_debug_message("Ai");
-spd = 3;
 //var foundInstance = noone;
-SearchForId = true;
+SearchForId = true
+if spd <= 5
+{
+spd += 0.01;
+}
 if SearchForId
 {
 	for (var i = 0; i < instance_number(Obj_Ai_Goto_Box); i++) {
@@ -14,6 +17,11 @@ if SearchForId
 	    }
 	}
 }
+if !place_meeting(X,Y,Obj_Ground)
+{
+spd = 0.3;	
+}
+
 if place_meeting(X, Y, foundInstance)
 {
 	CurentBoxVal++;
