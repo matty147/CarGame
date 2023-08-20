@@ -25,7 +25,7 @@ spd = 0.3;
 if place_meeting(X, Y, foundInstance)
 {
 	CurentBoxVal++;
-	show_debug_message("Checkpoint reached");
+	//show_debug_message("Checkpoint reached");
 }
 return [spd, foundInstance, CurentBoxVal];
 }
