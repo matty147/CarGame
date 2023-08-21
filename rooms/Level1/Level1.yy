@@ -113,7 +113,7 @@
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Ui","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7D24CFC9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"Obj_GameManager","path":"objects/Obj_GameManager/Obj_GameManager.yy",},"properties":[
-            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"Obj_GameManager","path":"objects/Obj_GameManager/Obj_GameManager.yy",},"propertyId":{"name":"NumberOfCars","path":"objects/Obj_GameManager/Obj_GameManager.yy",},"value":"4",},
+            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"Obj_GameManager","path":"objects/Obj_GameManager/Obj_GameManager.yy",},"propertyId":{"name":"NumberOfCars","path":"objects/Obj_GameManager/Obj_GameManager.yy",},"value":"1",},
           ],"rotation":0.0,"scaleX":5.0,"scaleY":5.0,"x":0.0,"y":0.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Player","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
@@ -124,7 +124,7 @@
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"Obj_Player","path":"objects/Obj_Player/Obj_Player.yy",},"propertyId":{"name":"Right","path":"objects/Obj_Player/Obj_Player.yy",},"value":"D",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"Obj_Player","path":"objects/Obj_Player/Obj_Player.yy",},"propertyId":{"name":"PlayerId","path":"objects/Obj_Player/Obj_Player.yy",},"value":"1",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"Obj_Player","path":"objects/Obj_Player/Obj_Player.yy",},"propertyId":{"name":"Ai","path":"objects/Obj_Player/Obj_Player.yy",},"value":"False",},
-          ],"rotation":0.0,"scaleX":0.5,"scaleY":-0.5,"x":324.0,"y":656.0,},
+          ],"rotation":0.0,"scaleX":0.5,"scaleY":0.5,"x":324.27997,"y":656.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_20D4E01E","colour":4278229265,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"Obj_Player","path":"objects/Obj_Player/Obj_Player.yy",},"properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"Obj_Player","path":"objects/Obj_Player/Obj_Player.yy",},"propertyId":{"name":"Up","path":"objects/Obj_Player/Obj_Player.yy",},"value":"G",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"Obj_Player","path":"objects/Obj_Player/Obj_Player.yy",},"propertyId":{"name":"Down","path":"objects/Obj_Player/Obj_Player.yy",},"value":"B",},

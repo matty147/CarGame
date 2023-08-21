@@ -19,6 +19,7 @@
   "ResourceOrderSettings": [
     {"name":"Spr_HitBox","order":10,"path":"sprites/Spr_HitBox/Spr_HitBox.yy",},
     {"name":"Spr_Grass","order":2,"path":"sprites/Spr_Grass/Spr_Grass.yy",},
+    {"name":"CarTest","order":11,"path":"sprites/CarTest/CarTest.yy",},
     {"name":"Obj_GameManager","order":3,"path":"objects/Obj_GameManager/Obj_GameManager.yy",},
     {"name":"Spr_Ramp","order":4,"path":"sprites/Spr_Ramp/Spr_Ramp.yy",},
     {"name":"Spr_Bullet","order":1,"path":"sprites/Spr_Bullet/Spr_Bullet.yy",},

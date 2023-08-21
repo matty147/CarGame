@@ -34,9 +34,11 @@
     "IDEVersion": "2023.6.0.92",
   },
   "resources": [
+    {"id":{"name":"sh_ChangeColor","path":"shaders/sh_ChangeColor/sh_ChangeColor.yy",},},
     {"id":{"name":"Spr_HitBox","path":"sprites/Spr_HitBox/Spr_HitBox.yy",},},
     {"id":{"name":"Spr_Grass","path":"sprites/Spr_Grass/Spr_Grass.yy",},},
     {"id":{"name":"Spr_Player","path":"sprites/Spr_Player/Spr_Player.yy",},},
+    {"id":{"name":"CarTest","path":"sprites/CarTest/CarTest.yy",},},
     {"id":{"name":"Obj_GameManager","path":"objects/Obj_GameManager/Obj_GameManager.yy",},},
     {"id":{"name":"Spr_Ramp","path":"sprites/Spr_Ramp/Spr_Ramp.yy",},},
     {"id":{"name":"Spr_Bullet","path":"sprites/Spr_Bullet/Spr_Bullet.yy",},},
