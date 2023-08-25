@@ -27,5 +27,19 @@ if place_meeting(X, Y, foundInstance)
 	CurentBoxVal++;
 	//show_debug_message("Checkpoint reached");
 }
+
+	if place_meeting(X,Y,Obj_Boostpad) //make it slow down slower
+	{
+		var collidedObject = instance_place(X, Y, Obj_Boostpad);
+		boost = collidedObject.Boost;
+		Afterboost = collidedObject.Lenght;
+		//spd *= boost; work strengly
+	}else if Afterboost > 0
+	{
+		Afterboost--;
+	}else boost = 1;
+	
+	
+
 return [spd, foundInstance, CurentBoxVal];
 }

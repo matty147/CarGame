@@ -131,7 +131,7 @@ if Ai
 	//show_debug_message("image_angle: " + string(half_angle )); // should make the rotacion more smooth
 	var targetX = lengthdir_x(result[0] * 1.5, half_angle );
 	var targetY = lengthdir_y(result[0] * 1.5, half_angle );
-	move_towards_point(result[1].x + deviation + targetX, result[1].y + deviation + targetY, result[0] * 3);
+	move_towards_point(result[1].x + deviation + targetX, result[1].y + deviation + targetY, result[0]);
 	//move_towards_point(result[1].x + deviation, result[1].y + deviation, result[0]* 1.5);
 	CurentBoxVal = result[2]
 	if (CurentBoxVal > Ai_checkpoints)	

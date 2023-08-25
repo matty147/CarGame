@@ -13,7 +13,7 @@ CurentBoxVal = 1;
 timer = -1;
 angle = 0;
 deviation = 0;
-
+Afterboost = 0;
 //Color = function(r,g,b) constructor
 //{
 //	red = r;

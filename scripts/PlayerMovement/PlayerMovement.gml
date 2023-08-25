@@ -118,12 +118,19 @@ if Left != 0 && Right != 0
 			SpeedUp -= 0.1;
 		}
 	}
+	
+	if place_meeting(X,Y,Obj_Boostpad) //make it slow down slower
 	{
-		
-		
-	}
-
-													//will have to make this work
+		var collidedObject = instance_place(X, Y, Obj_Boostpad);
+		boost = collidedObject.Boost;
+		Afterboost = collidedObject.Lenght;
+	}else if Afterboost > 0
+	{
+		Afterboost--;
+	}else boost = 1;
+	
+	
+	//will have to make this work
 	if height > 0 && !place_meeting(X,Y,Obj_Player) // && !place_meeting(x,y,Obj_ElevatedGround)
 	{ 
 		if place_meeting(X,Y,Obj_Ramp)
@@ -139,8 +146,8 @@ if Left != 0 && Right != 0
 
 	if height > 0 || !place_meeting(X + MoveX * SpeedUp, Y + MoveY * SpeedUp, Obj_Barrier)
 	{
-		X += MoveX * SpeedUp;
-		Y += MoveY * SpeedUp;
+		X += MoveX * SpeedUp * boost;
+		Y += MoveY * SpeedUp * boost;
 	}
 	//show_debug_message("SpeedUp:" + string(SpeedUp));
 return [X, Y];
