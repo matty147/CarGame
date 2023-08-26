@@ -115,21 +115,13 @@ if Left != 0 && Right != 0
 		MoveY = 0; MoveX = 0;
 		if (SpeedUp > 0.1)
 		{
-			SpeedUp -= 0.1;
+			if place_meeting(X,Y, Obj_Ice)
+			{
+			SpeedUp -= 0.05;
+			}else SpeedUp -= 0.1; //dosen't work for some reason
 		}
 	}
-	
-	if place_meeting(X,Y,Obj_Boostpad) //make it slow down slower
-	{
-		var collidedObject = instance_place(X, Y, Obj_Boostpad);
-		boost = collidedObject.Boost;
-		Afterboost = collidedObject.Lenght;
-	}else if Afterboost > 0
-	{
-		Afterboost--;
-	}else boost = 1;
-	
-	
+		
 	//will have to make this work
 	if height > 0 && !place_meeting(X,Y,Obj_Player) // && !place_meeting(x,y,Obj_ElevatedGround)
 	{ 
@@ -143,6 +135,18 @@ if Left != 0 && Right != 0
 	{
 	 SpeedUp = 1;	
 	}
+
+	if place_meeting(X,Y,Obj_Boostpad) //make it slow down slower // make it faster because it dosent feel like a boost and is too slow
+	{
+		var collidedObject = instance_place(X, Y, Obj_Boostpad);
+		boost = collidedObject.Boost;
+		Afterboost = collidedObject.Lenght;
+		SpeedUp = MaxSpeedUp;
+	}else if Afterboost > 0
+	{
+		SpeedUp = MaxSpeedUp;
+		Afterboost--;
+	}else boost = 1;
 
 	if height > 0 || !place_meeting(X + MoveX * SpeedUp, Y + MoveY * SpeedUp, Obj_Barrier)
 	{

@@ -1,4 +1,9 @@
 function AiControlls(X, Y, CurentBoxVal,spd){
+
+
+//NOT IMORTANT!!!
+
+//will have to update everything when i am finished with everything else
 //show_debug_message("Ai");
 //var foundInstance = noone;
 SearchForId = true

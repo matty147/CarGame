@@ -31,7 +31,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.89",
+    "IDEVersion": "2023.6.0.92",
   },
   "resources": [
     {"id":{"name":"sh_ChangeColor","path":"shaders/sh_ChangeColor/sh_ChangeColor.yy",},},
@@ -39,6 +39,7 @@
     {"id":{"name":"Spr_Boostpad","path":"sprites/Spr_Boostpad/Spr_Boostpad.yy",},},
     {"id":{"name":"Spr_Grass","path":"sprites/Spr_Grass/Spr_Grass.yy",},},
     {"id":{"name":"Spr_Player","path":"sprites/Spr_Player/Spr_Player.yy",},},
+    {"id":{"name":"Spr_Ice","path":"sprites/Spr_Ice/Spr_Ice.yy",},},
     {"id":{"name":"CarTest","path":"sprites/CarTest/CarTest.yy",},},
     {"id":{"name":"Obj_GameManager","path":"objects/Obj_GameManager/Obj_GameManager.yy",},},
     {"id":{"name":"Spr_Ramp","path":"sprites/Spr_Ramp/Spr_Ramp.yy",},},
@@ -57,6 +58,7 @@
     {"id":{"name":"Obj_Player","path":"objects/Obj_Player/Obj_Player.yy",},},
     {"id":{"name":"Obj_Button","path":"objects/Obj_Button/Obj_Button.yy",},},
     {"id":{"name":"Obj_ElevatedGround","path":"objects/Obj_ElevatedGround/Obj_ElevatedGround.yy",},},
+    {"id":{"name":"Obj_Ice","path":"objects/Obj_Ice/Obj_Ice.yy",},},
     {"id":{"name":"AiControlls","path":"scripts/AiControlls/AiControlls.yy",},},
     {"id":{"name":"Spr_Start","path":"sprites/Spr_Start/Spr_Start.yy",},},
     {"id":{"name":"Spr_Barrier","path":"sprites/Spr_Barrier/Spr_Barrier.yy",},},
