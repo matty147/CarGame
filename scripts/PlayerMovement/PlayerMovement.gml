@@ -74,10 +74,12 @@ if Left != 0 && Right != 0
 			Movement -= 0.25;
 		}
 	}
+	
 	if Up != 0 && Down != 0
 	{
 		if keyboard_check(ord(Up))
 			{
+				Moving = true;
 				if (SpeedUp <= MaxSpeedUp)
 				{
 					SpeedUp += 0.01;
@@ -89,8 +91,10 @@ if Left != 0 && Right != 0
 				SpeedUp = 0.5;
 				MoveX = DirX * -1;
 				MoveY = DirY * -1;
+				Moving = true;
 			}else
 			{
+				Moving = false;
 				MoveY = 0; MoveX = 0;
 				if (SpeedUp > 0.1)
 				{
@@ -99,6 +103,7 @@ if Left != 0 && Right != 0
 			}
 	}else if keyboard_check(vk_up)
 	{
+		Moving = true;
 		if (SpeedUp <= MaxSpeedUp)
 		{
 			SpeedUp += 0.01;
@@ -110,15 +115,21 @@ if Left != 0 && Right != 0
 		SpeedUp = 0.5;
 		MoveX = DirX * -1;
 		MoveY = DirY * -1;
+		Moving = true;
 	}else
 	{
-		MoveY = 0; MoveX = 0;
-		if (SpeedUp > 0.1)
+		Moving = false;
+		//MoveY = 0; MoveX = 0;
+	}
+	
+	if !moving
+	{
+		if SpeedUp >= 0.05
 		{
 			if place_meeting(X,Y, Obj_Ice)
 			{
 			SpeedUp -= 0.05;
-			}else SpeedUp -= 0.1; //dosen't work for some reason
+			}else SpeedUp -= 0.1;
 		}
 	}
 		
@@ -150,8 +161,8 @@ if Left != 0 && Right != 0
 
 	if height > 0 || !place_meeting(X + MoveX * SpeedUp, Y + MoveY * SpeedUp, Obj_Barrier)
 	{
-		X += MoveX * SpeedUp * boost;
-		Y += MoveY * SpeedUp * boost;
+		X += MoveX * SpeedUp;// * boost;
+		Y += MoveY * SpeedUp;// * boost;
 	}
 	//show_debug_message("SpeedUp:" + string(SpeedUp));
 return [X, Y];
