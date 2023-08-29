@@ -1,12 +1,21 @@
 function PlayerMovement(X, Y, Up, Down, Left, Right){
 	
+	// the movement variable is used toset te default speed of the car(player on grass, ground...)
+	// and the speedup variable is used to for speedups...
+	
+	
+	//sets the where the player will be next frame
 		DirX = lengthdir_x(Movement, image_angle);
 		DirY = lengthdir_y(Movement, image_angle);
+		
+		//ramp enter
 	if !place_meeting(X + DirX * SpeedUp, Y + DirY * SpeedUp, Obj_Ramp)
 	{
 		LastRecordedX = X;
 		LastRecordedY = Y;
 	}
+	
+	//turning
 if Left != 0 && Right != 0
 {
 	if keyboard_check(ord(Left)) 
@@ -23,6 +32,8 @@ if Left != 0 && Right != 0
 {
 	image_angle -= TurnSpeed;
 }
+
+//ramp
 	if place_meeting(X,Y, Obj_Ramp)
 	{
 		var distance = point_distance(LastRecordedX, 0, X, 0);
@@ -60,6 +71,7 @@ if Left != 0 && Right != 0
 		}
 	}
 
+//detecting if the player is on the ground
 	if place_meeting(X,Y, Obj_Ground) || height != 0
 	{
 		if (Movement <= DefMovement)
@@ -75,6 +87,7 @@ if Left != 0 && Right != 0
 		}
 	}
 	
+	//forward backwards controlls
 	if Up != 0 && Down != 0
 	{
 		if keyboard_check(ord(Up))
@@ -92,15 +105,7 @@ if Left != 0 && Right != 0
 				MoveX = DirX * -1;
 				MoveY = DirY * -1;
 				Moving = true;
-			}else
-			{
-				Moving = false;
-				MoveY = 0; MoveX = 0;
-				if (SpeedUp > 0.1)
-				{
-					SpeedUp -= 0.1;
-				}
-			}
+			}else Moving = false;
 	}else if keyboard_check(vk_up)
 	{
 		Moving = true;
@@ -122,9 +127,10 @@ if Left != 0 && Right != 0
 		//MoveY = 0; MoveX = 0;
 	}
 	
+	//slow down
 	if !moving
 	{
-		if SpeedUp >= 0.05
+		if SpeedUp > 0.1 //look at slowing down elsewhere, the variable movement is strange!!!
 		{
 			if place_meeting(X,Y, Obj_Ice)
 			{
@@ -133,6 +139,7 @@ if Left != 0 && Right != 0
 		}
 	}
 		
+	//ramp
 	//will have to make this work
 	if height > 0 && !place_meeting(X,Y,Obj_Player) // && !place_meeting(x,y,Obj_ElevatedGround)
 	{ 
@@ -147,6 +154,7 @@ if Left != 0 && Right != 0
 	 SpeedUp = 1;	
 	}
 
+	//bostpad
 	if place_meeting(X,Y,Obj_Boostpad) //make it slow down slower // make it faster because it dosent feel like a boost and is too slow
 	{
 		var collidedObject = instance_place(X, Y, Obj_Boostpad);
@@ -159,10 +167,11 @@ if Left != 0 && Right != 0
 		Afterboost--;
 	}else boost = 1;
 
+//moving the player
 	if height > 0 || !place_meeting(X + MoveX * SpeedUp, Y + MoveY * SpeedUp, Obj_Barrier)
 	{
-		X += MoveX * SpeedUp;// * boost;
-		Y += MoveY * SpeedUp;// * boost;
+		X += MoveX * SpeedUp * boost;
+		Y += MoveY * SpeedUp  * boost;
 	}
 	//show_debug_message("SpeedUp:" + string(SpeedUp));
 return [X, Y];

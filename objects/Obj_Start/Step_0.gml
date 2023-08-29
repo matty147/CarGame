@@ -30,7 +30,12 @@ if StartEndTimer
 				}
 				
 				PlayerFinishedNumber = PlayersFinished[0] + PlayersFinished[1] + PlayersFinished[2] + PlayersFinished[3];
-				if PlayerFinishedNumber + 1 = Obj_GameManager.NumberOfCars
+				if PlayerFinishedNumber + 1 = Obj_GameManager.NumberOfCars && PlayerNumber != 0
+				{
+					show_debug_message(PlayerFinishedNumber);
+					StartEndTimer = true;
+					timer = 120;
+				}else if PlayerFinishedNumber = 1
 				{
 					show_debug_message(PlayerFinishedNumber);
 					StartEndTimer = true;
