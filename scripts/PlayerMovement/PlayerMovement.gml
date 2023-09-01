@@ -21,7 +21,8 @@ if Left != 0 && Right != 0
 	if keyboard_check(ord(Left)) 
 	{
 		image_angle += TurnSpeed;
-	}	else if keyboard_check(ord(Right))
+	}	
+	else if keyboard_check(ord(Right))
 	{
 	    image_angle -= TurnSpeed;
 	}
@@ -53,7 +54,7 @@ if Left != 0 && Right != 0
 			Y = LastRecordedY - 24;
 		}
 		height = 24; 
-		image_index = 1;
+		image_index = 1; // FIX that there is no sprite 1!!!
 		layer = 0;
 	}else
 	{
@@ -78,9 +79,10 @@ if Left != 0 && Right != 0
 		{
 			Movement += 0.25;		
 		}
-	}else
+	}
+	else
 	{
-		SpeedUp = 0.5;
+		//SpeedUp = 0.5;
 		if (Movement >= 2)
 		{
 			Movement -= 0.25;
@@ -128,15 +130,19 @@ if Left != 0 && Right != 0
 	}
 	
 	//slow down
-	if !moving
+	if !Moving
 	{
-		if SpeedUp > 0.1 //look at slowing down elsewhere, the variable movement is strange!!!
+		if SpeedUp >= 0
 		{
 			if place_meeting(X,Y, Obj_Ice)
 			{
-			SpeedUp -= 0.05;
-			}else SpeedUp -= 0.1;
+				SpeedUp -= 0.005;
+			}else SpeedUp -= 0.05;
 		}
+	}
+	if SpeedUp < 0
+	{
+		SpeedUp = 0;	
 	}
 		
 	//ramp
